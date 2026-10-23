@@ -1,0 +1,8 @@
+231-
+232-  <command>
+233:    <name>netsh</name>
+234-    <executable>netsh.exe</executable>
+235-    <timeout_allowed>yes</timeout_allowed>
+236-  </command>
+237-
+238-  

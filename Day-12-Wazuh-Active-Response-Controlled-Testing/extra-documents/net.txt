@@ -1,0 +1,5 @@
+
+Name      Length LastWriteTime
+----      ------ -------------
+netsh.exe 213424 10/8/2026 2:13:56 PM
+

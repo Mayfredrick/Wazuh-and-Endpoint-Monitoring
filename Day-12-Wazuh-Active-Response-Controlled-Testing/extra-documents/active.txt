@@ -1,0 +1,50 @@
+
+    <!-- Agent buffer options -->
+    <client_buffer>
+>     <disabled>no</disabled>
+      <queue_size>5000</queue_size>
+      <events_per_second>500</events_per_second>
+  
+    <localfile>
+>     <location>active-response\active-responses.log</location>
+      <log_format>syslog</log_format>
+    </localfile>
+    <!-- Policy monitoring -->
+    <rootcheck>
+>     <disabled>no</disabled>
+      <windows_apps>./shared/win_applications_rcl.txt</windows_apps>
+      <windows_malware>./shared/win_malware_rcl.txt</windows_malware>
+    <!-- File integrity monitoring -->
+    <syscheck>
+>     <disabled>no</disabled>
+     
+  
+  
+>     <disabled>no</disabled>
+  
+      <!-- Frequency that syscheck is executed default every 12 hours -->
+    <!-- System inventory -->
+    <wodle name="syscollector">
+>     <disabled>no</disabled>
+      <interval>1h</interval>
+      <scan_on_start>yes</scan_on_start>
+    <!-- CIS policies evaluation -->
+    <wodle name="cis-cat">
+>     <disabled>yes</disabled>
+      <timeout>1800</timeout>
+      <interval>1d</interval>
+    <!-- Osquery integration -->
+    <wodle name="osquery">
+>     <disabled>yes</disabled>
+      <run_daemon>yes</run_daemon>
+      <bin_path>C:\Program Files\osquery\osqueryd</bin_path>
+  
+    <!-- Active response -->
+>   <active-response>
+>     <disabled>no</disabled>
+      <ca_store>wpk_root.pem</ca_store>
+      <ca_verification>yes</ca_verification>
+>   </active-response>
+  
+    <!-- Choose between plain or json format (or both) for internal logs -->
+
